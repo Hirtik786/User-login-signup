@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script type="module">
+     const firebaseConfig = {
+  apiKey: "AIzaSyBVSBwYwT0TGuusFTlZu9JBHyU6HOozPDA",
+  authDomain: "dashboard-project-73e01.firebaseapp.com",
+  databaseURL: "https://dashboard-project-73e01-default-rtdb.firebaseio.com",
+  projectId: "dashboard-project-73e01",
+  storageBucket: "dashboard-project-73e01.appspot.com",
+  messagingSenderId: "572484628407",
+  appId: "1:572484628407:web:d98764a64cc926f616c232",
+  measurementId: "G-Y897PW6MH4"
+};
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" id="Academy" href="#">Academy</a>
+        <!-- <img src="./CamScanner 07-10-2022 09.23_4.jpg" id="profile" /> -->
+        <button onclick="logOut()" id="logout" >Logout</button>
+      </div>
+    </nav>
+   <div style="width: 100%; height: 100vh;  background-color: rgba(0, 0, 0, 0.6);">
+    <h1 id="top-heading">Welcome <span id="name-profile"></span> to Your Profile</h1>
+   </div>
+  </body>
+  <script src="app.js"></script>
+</html>

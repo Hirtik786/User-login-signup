@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script type="module">
+      const firebaseConfig = {
+        apiKey: "AIzaSyBVSBwYwT0TGuusFTlZu9JBHyU6HOozPDA",
+        authDomain: "dashboard-project-73e01.firebaseapp.com",
+        databaseURL:
+          "https://dashboard-project-73e01-default-rtdb.firebaseio.com",
+        projectId: "dashboard-project-73e01",
+        storageBucket: "dashboard-project-73e01.appspot.com",
+        messagingSenderId: "572484628407",
+        appId: "1:572484628407:web:d98764a64cc926f616c232",
+        measurementId: "G-Y897PW6MH4",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div id="header" class="container">
+      <div id="head" class="container-fluid">
+        <h1>Sign Up Portal</h1>
+      </div>
+      <input
+        type="text"
+        placeholder="Full Name"
+        class="container-fluid"
+        id="name"
+      />
+      <input
+        type="text"
+        placeholder="Father Name"
+        class="container-fluid"
+        id="fName"
+      />
+      <input
+        type="email"
+        placeholder="Email Address"
+        class="container-fluid"
+        id="email"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        class="container-fluid"
+        id="password"
+      />
+      <input
+        type="number"
+        placeholder="CNIC Number"
+        class="container-fluid"
+        id="cnicNumber"
+      />
+      <input
+        type="number"
+        placeholder="Mobile Number"
+        class="container-fluid"
+        id="mobileNumber"
+      />
+      <select name="course" class="dropdown" id="selectCourse">
+        <option value="Select Course" selected>Select Course</option>
+        <option value="Web Development">Web Development</option>
+        <option value="App Development">App Development</option>
+        <option value="Graphic Designing">Graphic Designing</option>
+        <option value="Social Media Marketing">Social Media Marketing</option>
+        <option value="Wordpress">Wordpress</option>
+      </select>
+      <select name="Gender" class="dropdown" id="selectGender">
+        <option value="Select Gender" selected>Select Gender</option>
+        <option value="Male" >Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <div id="linking">
+        <p><a href="./signIn.html" id="link">Sign In</a></p>
+      </div>
+      <div id="linking">
+        <p id="message"></p>
+      </div>
+      <button id="signUp" onclick="createAccount()">Sign Up</button>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

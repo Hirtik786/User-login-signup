@@ -1,0 +1,102 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  /* background-image: linear-gradient(to right, red, purple); */
+  /* background-image: url(./pexels-felix-mittermeier-956981.jpg); */
+  background-image: url(./bg-image.jpg);
+  background-size: cover;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: sans-serif;
+}
+#header {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 40px white;
+  border: 3px solid white;
+  padding-bottom: 10px;
+  border-radius: 7px 7px 0px 0px;
+  margin: 20px;
+}
+#head {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-radius: 7px 7px 0px 0px;
+  background-color: darkseagreen;
+  background-image: linear-gradient(to bottom, red, purple);
+  border-bottom: 3px solid white;
+  color: white;
+}
+input {
+  width: 90% !important;
+  margin: 10px;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+.dropdown{
+  width: 90% !important;
+  margin: 10px;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+#signUp {
+  /* width: 200px; */
+  /* height: 50px; */
+  border-radius: 40px;
+  background-image: linear-gradient(to right, red, purple);
+  border: 3px solid white;
+  font-size: 24px;
+  color: white;
+  margin-top: 20px;
+}
+#link {
+  /* text-align: left; */
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+#linking {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  #header {
+    width: 50%;
+  }
+}
+#message {
+  display: none;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+#message1 {
+  display: none;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+#message2 {
+  display: none;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+

@@ -1,0 +1,32 @@
+nav {
+  background-image: linear-gradient(to bottom, red, purple);
+  border: 1px solid white;
+}
+body {
+  /* background-color: rgba(207, 131, 131, 0.5); */
+  background-image: url(./bg-image.jpg);
+  background-size: cover;
+}
+#Academy {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  /* margin-left: -100px; */
+}
+#top-heading{
+    color: white;
+    text-align:center;
+    font-weight: bold;
+}
+#profile{
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+#logout{
+  background-image: linear-gradient(to bottom, red, purple);
+  border-radius: 40px;
+  color: white;
+  border: 2px solid white;
+  font-size: 24px;
+}
