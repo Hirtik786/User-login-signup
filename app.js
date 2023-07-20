@@ -11,8 +11,22 @@ let message1 = document.getElementById("message1");
 let message2 = document.getElementById("message2");
 let emailSignin = document.getElementById("emailSignin");
 let passwordSignin = document.getElementById("passwordSignin");
-// let messageVerification = document.getElementById("message-verification")
+let messageVerification = document.getElementById("message-verification")
 let nameProfile = document.getElementById("name-profile");
+
+let userCheck = () => {
+  firebase.auth().onAuthStateChanged((user) => {
+    console.log(user);
+    if (user.emailVerified == true) {
+      window.location.assign("homepage.html");
+    } else if (user.emailVerified == false) {
+      window.location.assign("verification.html");
+    } else {
+      window.location.assign("index.html");
+    }
+  });
+};
+// window.onload = userCheck;
 
 let createAccount = () => {
   if (Name.value == "") {
@@ -111,13 +125,6 @@ let createAccount = () => {
           message.style.display = "none";
         }, 1000);
       });
-    // firebase.database().ref("data/").push({
-    //   Username: Name.value,
-    //   FatherName: fName.value,
-    //   EmailAddress: Email.value,
-    //   CnicNumber: CNICNumber.value,
-    //   PhoneNumber: MobileNumber.value,
-    // });
     firebase.firestore().collection("Users").add({
       Username: Name.value,
       FatherName: fName.value,
@@ -217,12 +224,12 @@ let sendVerificationEmail = () => {
     .currentUser.sendEmailVerification()
     .then(() => {
       console.log("Email verification sent!");
-      // message2.style.display = "block";
-      // message2.style.color = "green";
-      // message2.innerHTML = "Verification email sent successfully";
-      // setTimeout(() => {
-      //   message2.style.display = "none";
-      // }, 1000);
+      messageVerification.style.display = "block";
+      messageVerification.style.color = "green";
+      messageVerification.innerHTML = "Verification email sent successfully";
+      setTimeout(() => {
+        message2.style.display = "none";
+      }, 1000);
     });
 };
 let logOut = () => {
@@ -237,10 +244,3 @@ let logOut = () => {
       console.log("error", error.message);
     });
 };
-
-let userCheck = () => {
-  firebase.auth().onAuthStateChanged((user) => {
-    console.log(user);
-  });
-};
-window.onload = userCheck;
